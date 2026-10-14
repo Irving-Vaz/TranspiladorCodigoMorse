@@ -3,66 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/CSS/style.css">
     <title>Traductor Morse</title>
 </head>
-<body class="bg-dark text-light">
+<body>
 
-    <div class="container py-5">
+    <div class="main-wrapper">
 
-        <div class="text-center mb-4">
+        <div class="header-content">
             <h1>Traductor Morse</h1>
-            <p class="text-secondary">Traducir codigo morse y vice</p>
+            <p>Traduce código morse y viceversa</p>
         </div>
 
-        <div class="card bg-secondary text-light shadow p-4">
+        <div class="card-box">
 
-            <div class="mb-4">
-                <label class="form-label">Tipo de conversión</label>
-
-                <div class="d-flex gap-2">
-                    <button type="button" class="btn btn-info w-50" id="textoMorse">
+            <div class="form-group">
+                <label class="custom-label">Selecciona la conversión</label>
+                <div class="button-row">
+                    <button type="button" class="custom-btn btn-primary-custom" id="textoMorse">
                         Texto a Morse
                     </button>
-
-                    <button type="button" class="btn btn-outline-light w-50" id="morseTexto">
+                    <button type="button" class="custom-btn btn-outline-custom" id="morseTexto">
                         Morse a Texto
                     </button>
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="entrada" class="form-label" id="etiquetaEntrada">
+            <div class="form-group">
+                <label for="entrada" class="custom-label" id="etiquetaEntrada">
                     Ingresa el texto
                 </label>
-
-                <textarea class="form-control" id="entrada" rows="5"
+                <textarea class="custom-textarea" id="entrada" rows="4"
                     placeholder="Escribe aquí el texto que deseas convertir..."></textarea>
             </div>
 
-            <div class="d-flex gap-2 mb-4">
-                <button type="button" class="btn btn-info flex-fill" id="convertir">
+            <div class="button-row action-row">
+                <button type="button" class="custom-btn btn-primary-custom" id="convertir">
                     Convertir
                 </button>
-
-                <button type="button" class="btn btn-danger flex-fill" id="barredora">
+                <button type="button" class="custom-btn btn-danger-custom" id="barredora">
                     Limpiar
                 </button>
             </div>
 
-            <div class="mb-2">
-                <label for="resultado" class="form-label">Resultado</label>
-
-                <textarea class="form-control" id="resultado" rows="5"
+            <div class="form-group">
+                <label for="resultado" class="custom-label">Resultado</label>
+                <textarea class="custom-textarea" id="resultado" rows="4"
                     placeholder="Aquí aparecerá el resultado..." readonly></textarea>
             </div>
 
         </div>
 
-        <div class="text-center mt-4 text-secondary">
+        <div class="footer-content">
             <p>Traductor de texto y código Morse</p>
         </div>
 
     </div>
 
+    <script src="./bundle.js"></script>
 </body>
 </html>
